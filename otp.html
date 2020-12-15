@@ -3,6 +3,7 @@
 
 <head>
 	<title>Verify</title>
+	<meta name="google-signin-client_id" content="268964620079-8kmpih9qsa3chterl16qp64ve5n3f5hg.apps.googleusercontent.com">
 	<link rel="stylesheet" type="text/css" href="otp/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -41,8 +42,8 @@
 			<div class="form">
 				<h2 class="title ">Create Account</h2>
 				<p>Or use your email for registration</p>
-				<a class="icon" href="#"><i class="fab fa-facebook">acebook</i></a>
-				<a class="icon" href="#"><i class="fab fa-google">mail</i></a>
+				<a class="icon" href="javascript:void(0)" onclick="fblogin()"><i class="fab fa-facebook">acebook</i></a>
+				<a class="icon" href="javascript:void(0)" onclick="gmaillogin()"><i class="fab fa-google">mail</i></a>
 				
 			
 		
@@ -67,6 +68,56 @@
 			</div>
 		</div>
 	</div>
+
+
+
+	<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '692684038307720',
+				cookie: true,
+				xfbml: true,
+				version: 'v9.0'
+			});
+
+			FB.AppEvents.logPageView();
+
+		};
+
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) { return; }
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+		function fblogin(){
+			FB.login(function(response){
+				if(response.authResponse){
+					Afterfblogin();
+				}
+			});
+		}
+
+
+		function Afterfblogin() {
+
+			FB.getLoginStatus(function (response) {
+				if (response.status === 'connected') {
+					FB.api('/me', function (response) {
+						console.log(response);
+					});
+				}
+			});
+		}
+
+
+
+
+	</script>
+
+
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 
