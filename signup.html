@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Signup</title>
+	<link rel="stylesheet" type="text/css" href="signup/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="img">
+			<table class="table">
+				<tr>
+					<td>
+						<img src="img/user.svg">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h1>Welcome Back!!</h1>
+						<p>Welcome back, if you know us you can directly login from here</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="login.html"><input type="submit" class="btn login" value="Log In"></a>
+					</td>
+
+			</table>
+
+
+			<a href="index.html"><input type="submit" class=" skip" value="skip"></a>
+		</div>
+
+
+		<!-- login section -->
+		<div class="login-content">
+			<form action="otp.html" method="POST">
+				<h2 class="title ">Create Account</h2>
+				<p>Or use your email for registration</p>
+				<a class="icon" href="#"><i class="fab fa-facebook">acebook</i></a>
+				<a class="icon" href="#"><i class="fab fa-google">mail</i></a>
+
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<!-- <h5>Full Name</h5> -->
+						<input type="text" class="input" placeholder="Full Name" name="fname">
+					</div>
+				</div>
+
+				<div class="input-div one">
+					<div class="i">
+
+					</div>
+					<div class="div">
+
+						<input type="email" class="input" placeholder="example@gmail.com" name="email">
+					</div>
+				</div>
+
+				<div class="input-div one">
+					<div class="i">
+
+					</div>
+					<div class="div">
+
+						<input type="number" class="input" placeholder="Mobile number" style="color: aliceblue;">
+					</div>
+				</div>
+
+
+
+				<input type="submit" class="btn register" value="Get otp">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="signup/js/main.js"></script>
+</body>
+
+</html>
