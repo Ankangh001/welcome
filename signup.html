@@ -3,6 +3,9 @@
 
 <head>
 	<title>Signup</title>
+	<meta name="google-signin-client_id" content="268964620079-8kmpih9qsa3chterl16qp64ve5n3f5hg.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+	
 	<link rel="stylesheet" type="text/css" href="signup/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -10,6 +13,10 @@
 </head>
 
 <body>
+
+
+	<div id="my-signin2" data-onsuccess="gmaillogin()"></div>
+
 
 	<div class="container">
 		<div class="img">
@@ -90,6 +97,14 @@
 
 
 	<script>
+
+
+function gmaillogin(userInfo){
+	console.log();
+}
+
+
+
 		window.fbAsyncInit = function () {
 			FB.init({
 				appId: '692684038307720',
@@ -134,6 +149,24 @@
 
 
 	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
